@@ -135,7 +135,7 @@ for(int i=1;i<=n;i++){
   for(int j = 1;j<=space;j++){
     cout<<" ";
   }
-  for(int i=1;i>=1;j--){
+  for(int j=1;j>=1;j--){
     cout<<j;
   }
   cout<<endl;
@@ -153,16 +153,43 @@ for(int i=0;i<n;i++){
 }
 }
 void pattern14(int n){
-
+for(int i=0;i<n;i++){
+  for(char ch='A';ch<='A'+ i;ch++){
+    cout<<ch<<" ";
+  }
 }
-
+}
 void pattern15(int n){
-
+for(int i=0;i<n;i++){
+  for(char ch='A';ch<='A'+ (n-i-1);ch++){
+    cout<<ch<<" ";
+  }
+}
 }
 void pattern16(int n){
-  
+  for(int i = 0; i < n; i++) {
+        for(int j = 0; j <= i; j++) {
+            cout << char('A' + i);
+        }
+        cout << endl;
+    }
 }
+void pattern17(int n){
+  for(int i = 0; i < n; i++) {
 
+        for(int j = 0; j < n-i-1; j++) {
+            cout << " ";
+        }
+        for(int j = 0; j <= i; j++) {
+            cout << char('A' + j);
+        }
+
+        for(int j = i-1; j >= 0; j--) {
+            cout << char('A' + j);
+        }
+        cout << endl;
+    }
+}
 
 int main() {
     int n =5;
@@ -181,6 +208,9 @@ int main() {
     pattern13(n);
     pattern14(n);
     pattern15(n);
+    pattern16(n);
+    pattern17(n);
+    
     
     return 0;
 }
